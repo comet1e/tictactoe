@@ -1,0 +1,256 @@
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+    background-color: yellow;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* ----------------------------------------------- */
+
+#gif {
+    height: 100%;
+    width: 100%;
+}
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(46, 115, 204); /* Fallback color */
+    background-color: rgb(46, 115, 204); /* Black w/ opacity */
+    background-image:url(https://tenor.com/view/comet-space-stars-shooting-star-wish-gif-4965228); background-repeat:repeat;
+    animation-name: modalopen;
+    animation-duration: 1s;
+  }
+  
+  /* Modal Content/Box */
+  .modal-content {
+    background-image: linear-gradient(rgb(211, 68, 255), rgb(33, 5, 44));
+    
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    height: 50%;
+    width: 80%; /* Could be more or less, depending on screen size */
+    justify-content: center;
+    border-radius: 1rem;
+
+  }
+
+  #tic {
+    /* background-image: linear-gradient(90deg,purple, blue); */
+    background-clip: text;
+    color: transparent;
+    animation: myflicker 2s infinite;
+  }
+
+  /* #tic:hover {
+    animation: myflicker 2s infinite;
+  } */
+    .title {
+        text-align: center;
+        font-size: 2rem;
+        margin: 30px;
+        margin-bottom: 80px;
+        display: flex;
+        gap: 30px;
+        flex-direction: column;
+        animation: floating 3s infinite;
+
+    }
+
+@keyframes myflicker {
+    25% { color: red; }
+    50%  { color:yellow; }
+    75%  { color:rgb(87, 250, 12); }
+}
+    .gameModeSelection {    
+        display: flex;
+        gap: 30px;
+        justify-content: space-around;
+        margin-top: 30px ;
+
+    }
+  
+    .modeSelection{
+
+        background-color: rgb(163, 21, 104);
+        padding: 30px;
+        border-radius: 2rem;
+        font-size: 2rem;
+
+    }
+
+    .modeSelection:hover {
+        animation: bounce 2s ;
+        background-color: rgb(216, 226, 66);
+    }
+
+  /* The Close Button */
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  
+  @keyframes modalopen {
+    from{ opacity:0}
+    to {opacity:1}
+}
+
+@keyframes floating {
+    0% { transform: translate(0,  0px); }
+    50%  { transform: translate(0, 15px); }
+    100%   { transform: translate(0, -0px); }   
+}
+
+@keyframes bounce {
+    0%, 100%, 50%, 80% {
+        -webkit-transform: translateY(0);
+        -ms-transform:     translateY(0);
+        transform:         translateY(0)
+    }
+
+  
+    40% {
+        -webkit-transform: translateY(-20px);
+        -ms-transform:     translateY(-20px);
+        transform:         translateY(-20px)
+    }
+    60% {
+        -webkit-transform: translateY(-10px);
+        -ms-transform:     translateY(-10px);
+        transform:         translateY(-10px)
+    }
+}
+
+.header {
+    display: flex;
+    gap: 50px;
+
+}
+
+
+.header div {
+    flex: 1 1 auto;
+}
+
+.returnbtn {
+    background-color: yellow;
+    height: 40px;
+    width: 120px;
+    text-align: center;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 1rem;
+    font-size: 1.1rem;
+    cursor: pointer;
+    /* flex: 1 1 0% ; */
+} 
+
+.header-Title {
+    /* background-color: black; */
+    font-size: 2rem;
+    flex-shrink: 0;
+    text-align: center;
+    align-self: center;
+    animation: myflicker 4s infinite;
+}
+
+.profile {
+    align-self: center;
+    /* padding-left: 200px; */
+    background-color: red;
+    display: flex;
+    gap: 40px;
+    padding:30px;
+    /* margin-left: 30px; */
+}
+
+.icons {
+    background-color: white;
+    border-radius: 50%;
+    cursor: pointer;
+    
+   
+}
+
+.centre {
+   display: grid;
+   grid-template-columns: 1fr 1fr 1fr;
+   grid-template-rows: 1fr 1fr 1fr;
+   padding: 40px;
+}
+
+.board {
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 0.3rem;
+    cursor: pointer;
+    /* animation: floating 10s infinite; */
+}
+
+.board:hover {
+    opacity: 0.5;
+
+}
+.leftSide {
+    
+}
+.rightSide {
+   
+}
